@@ -1,0 +1,48 @@
+name: SketchCAD cross-platform build
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  nim-core:
+    name: ${{ matrix.name }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Windows x64
+            runner: windows-2025
+          - name: Windows ARM64
+            runner: windows-11-arm
+          - name: Ubuntu x64
+            runner: ubuntu-24.04
+          - name: Ubuntu ARM64
+            runner: ubuntu-24.04-arm
+          - name: Fedora x64
+            runner: ubuntu-24.04
+            container: fedora:latest
+          - name: Fedora ARM64
+            runner: ubuntu-24.04-arm
+            container: fedora:latest
+    runs-on: ${{ matrix.runner }}
+    container: ${{ matrix.container || null }}
+    steps:
+      - name: Install Fedora build dependencies
+        if: matrix.container
+        run: dnf install -y git gcc nim
+      - uses: actions/checkout@v4
+      - name: Install Nim
+        if: ${{ !matrix.container }}
+        uses: jiro4989/setup-nim-action@v2
+        with:
+          nim-version: stable
+      - name: Build Nim core
+        working-directory: nim/sketchcad_core
+        run: nim c --app:lib --noMain:on -d:release src/sketchcad_core.nim
+      - name: Test Nim core
+        working-directory: nim/sketchcad_core
+        run: nim c -r tests/test_core.nim

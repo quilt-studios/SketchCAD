@@ -48,8 +48,8 @@ using App::Application;
 using Base::Console;
 
 const auto sBanner = fmt::format(
-    "(C) 2001-{} FreeCAD contributors\n"
-    "FreeCAD is free and open-source software licensed under the terms of LGPL2+ license.\n\n",
+    "(C) 2001-{} FreeCAD and SketchCAD contributors\n"
+    "SketchCAD is free and open-source software licensed under the LGPL2+ license.\n\n",
     FCCopyrightYear
 );
 
@@ -68,8 +68,8 @@ int main(int argc, char** argv)
 #endif
 
     // Name and Version of the Application
-    App::Application::Config()["ExeName"] = "FreeCAD";
-    App::Application::Config()["ExeVendor"] = "FreeCAD";
+    App::Application::Config()["ExeName"] = "SketchCAD";
+    App::Application::Config()["ExeVendor"] = "SketchCAD";
     App::Application::Config()["AppDataSkipVendor"] = "true";
 
     // set the banner (for logging and console)

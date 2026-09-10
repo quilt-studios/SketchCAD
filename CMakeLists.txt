@@ -151,6 +151,11 @@ SetGlobalCompilerAndLinkerSettings()
 add_subdirectory(src)
 add_subdirectory(data)
 
+option(SKETCHCAD_BUILD_NIM_CORE "Build the SketchCAD Nim geometry core" OFF)
+if(SKETCHCAD_BUILD_NIM_CORE)
+    add_subdirectory(nim)
+endif()
+
 BuildAndInstallDesignerPlugin()
 
 CreatePackagingTargets()

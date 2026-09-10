@@ -40,7 +40,7 @@ class BIMWorkbench(Workbench):
 
         bdir = os.path.join(FreeCAD.getResourceDir(), "Mod", "BIM")
         tt = QT_TRANSLATE_NOOP("BIM", "The BIM workbench is used to model buildings")
-        self.__class__.MenuText = QT_TRANSLATE_NOOP("BIM", "BIM")
+        self.__class__.MenuText = QT_TRANSLATE_NOOP("BIM", "SketchCAD Architecture")
         self.__class__.ToolTip = tt
         self.__class__.Icon = os.path.join(bdir, "Resources", "icons", "BIMWorkbench.svg")
 
@@ -68,6 +68,7 @@ class BIMWorkbench(Workbench):
         # Import Draft & BIM commands
         import DraftTools
         import bimcommands
+        import SketchCADTools
         from nativeifc import ifc_commands
 
         # build menus and toolbars
@@ -126,6 +127,31 @@ class BIMWorkbench(Workbench):
             "Arch_Equipment",
             "Arch_Rebar",
             "BIM_GenericTools",
+        ]
+
+        # Fast, approachable architectural primitives inspired by direct-modeling tools.
+        self.sketchcadtools = [
+            "SketchCAD_House",
+            "SketchCAD_Fence",
+            "SketchCAD_Balcony",
+            "SketchCAD_Stairs",
+            "SketchCAD_Deck",
+            "SketchCAD_Pergola",
+        ]
+
+        # A compact direct-modeling strip keeps the most frequently used draw,
+        # transform, inspect and camera commands in one predictable place.
+        self.directtools = [
+            "Draft_Line",
+            "Draft_Rectangle",
+            "Draft_Offset",
+            "BIM_Extrude",
+            "Draft_Move",
+            "Draft_Rotate",
+            "Std_Measure",
+            "Separator",
+            "Std_ViewIsometric",
+            "Std_ViewFitAll",
         ]
 
         self.modify_gen = [
@@ -521,6 +547,8 @@ class BIMWorkbench(Workbench):
         self.appendToolbar(t1, self.draftingtools)
         self.appendToolbar(t2, self.snapbar)
         self.appendToolbar(t3, self.bimtools)
+        self.appendToolbar("SketchCAD Build", self.sketchcadtools)
+        self.appendToolbar("SketchCAD Direct Modeling", self.directtools)
         self.appendToolbar(t4, self.annotationtools)
         self.appendToolbar(t7, self.modify_gen)
         self.appendToolbar(t5, self.modify_2d)
@@ -548,6 +576,8 @@ class BIMWorkbench(Workbench):
         #    self.bimtools_menu.remove("Arch_RebarTools")
         self.appendMenu(t1, self.draftingtools)
         self.appendMenu(t2, self.bimtools)
+        self.appendMenu("SketchCAD Build", self.sketchcadtools)
+        self.appendMenu("SketchCAD Direct Modeling", self.directtools)
         # if self.rebar:
         #    self.appendMenu([t2, t3], self.rebar)
         self.appendMenu(t4, self.annotationtools)
