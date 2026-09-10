@@ -59,8 +59,8 @@
 void PrintInitHelp();
 
 const auto sBanner = fmt::format(
-    "(C) 2001-{} FreeCAD contributors\n"
-    "FreeCAD is free and open-source software licensed under the terms of LGPL2+ license.\n\n",
+    "(C) 2001-{} FreeCAD and SketchCAD contributors\n"
+    "SketchCAD is free and open-source software licensed under the LGPL2+ license.\n\n",
     FCCopyrightYear
 );
 
@@ -207,8 +207,8 @@ int main(int argc, char** argv)
 #endif
 
     // Name and Version of the Application
-    App::Application::Config()["ExeName"] = "FreeCAD";
-    App::Application::Config()["ExeVendor"] = "FreeCAD";
+    App::Application::Config()["ExeName"] = "SketchCAD";
+    App::Application::Config()["ExeVendor"] = "SketchCAD";
     App::Application::Config()["AppDataSkipVendor"] = "true";
     App::Application::Config()["MaintainerUrl"] = "https://freecad.org";
 
@@ -219,7 +219,7 @@ int main(int argc, char** argv)
     App::Application::Config()["AboutImage"] = App::Application::isDevelopmentVersion()
         ? "freecadaboutdev"
         : "freecadabout";
-    App::Application::Config()["StartWorkbench"] = "PartDesignWorkbench";
+    App::Application::Config()["StartWorkbench"] = "BIMWorkbench";
     // App::Application::Config()["HiddenDockWindow"] = "Property editor";
     App::Application::Config()["SplashAlignment"] = "Bottom|Left";
     App::Application::Config()["SplashTextColor"] = "#418FDE";

@@ -1,44 +1,29 @@
-<a href="https://freecad.org"><img src="/src/Gui/Icons/freecad.svg" height="100px" width="100px"></a>
+# SketchCAD
 
-### Your own 3D Parametric Modeler
+### Fast, approachable parametric 3D design
 
-[Website](https://www.freecad.org) •
-[Documentation](https://wiki.freecad.org) •
-[Forum](https://forum.freecad.org/) •
-[Bug tracker](https://github.com/FreeCAD/FreeCAD/issues) •
-[Git repository](https://github.com/FreeCAD/FreeCAD) •
-[Blog](https://blog.freecad.org)
+SketchCAD is a community CAD application focused on direct, discoverable modelling for
+architecture, houses, fences, balconies, decks and outdoor structures. It combines a
+SketchUp-inspired quick-building workflow with precise parametric models, BIM/IFC tools,
+and production drawings.
 
+## Highlights
 
-[![Release](https://img.shields.io/github/release/freecad/freecad.svg)](https://github.com/freecad/freecad/releases/latest) [![Crowdin](https://d322cqt584bo4o.cloudfront.net/freecad/localized.svg)](https://crowdin.com/project/freecad)
+* **SketchCAD Build toolbar** — one-click house, fence, balcony, stair, deck and pergola
+  generators provide useful starting geometry, and each generator is also scriptable.
+* **Familiar modelling** — sketch in 2D, push designs into 3D, group building elements and
+  return to parameters whenever dimensions change. A dedicated Direct Modeling toolbar keeps
+  line, rectangle, offset, extrude, move, rotate, measure and camera controls together without
+  copying another application's protected branding or visual assets.
+* **Modern interface** — an airy SketchCAD Modern theme, architecture-first startup and
+  focused tool grouping reduce visual clutter.
+* **Modern foundations** — new geometry calculations are being implemented in Nim behind a
+  stable C ABI. The first bounded architecture-core migration milestone is 20% complete; see
+  [`nim/MIGRATION.md`](nim/MIGRATION.md) for its scope and safety rules.
+* **Cross-platform** — automated core builds cover Windows, Ubuntu and Fedora on x64 and ARM64.
 
-<img src="/.github/images/partdesign.png" width="800"/>
-
-Overview
---------
-
-* **Freedom to build what you want**  FreeCAD is an open-source parametric 3D 
-modeler made primarily to design real-life objects of any size. 
-Parametric modeling allows you to easily modify your design by going back into 
-your model history to change its parameters. 
-
-* **Create 3D from 2D and back** FreeCAD lets you sketch geometry-constrained
- 2D shapes and use them as a base to build other objects.
- It contains many components to adjust dimensions or extract design details from 
- 3D models to create high quality production-ready drawings.
-
-* **Designed for your needs** FreeCAD is designed to fit a wide range of uses
-including product design, mechanical engineering and architecture,
-whether you are a hobbyist, programmer, experienced CAD user, student or teacher.
-
-* **Cross platform** FreeCAD runs on Windows, macOS and Linux operating systems.
-
-* **Underlying technology**
-    * **OpenCASCADE** A powerful geometry kernel, the most important component of FreeCAD
-    * **Coin3D library** Open Inventor-compliant 3D scene representation model
-    * **Python** FreeCAD offers a broad Python API
-    * **Qt** Graphical user interface built with Qt
-
+SketchCAD is derived from FreeCAD and remains LGPL-licensed. Existing FreeCAD file-format,
+workbench and Python API compatibility is intentionally retained during the transition.
 
 Installing
 ----------

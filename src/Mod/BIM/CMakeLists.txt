@@ -67,6 +67,7 @@ SET(Arch_SRCS
     TestArchGui.py
     ArchReport.py
     ArchSql.py
+    SketchCADTools.py
 )
 
 SET(importers_SRCS
