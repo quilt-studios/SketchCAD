@@ -13,7 +13,9 @@ add_custom_command(
             --out:${SKETCHCAD_NIM_LIBRARY}
             -d:release
             ${CMAKE_CURRENT_SOURCE_DIR}/sketchcad_core/src/sketchcad_core.nim
-    DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/sketchcad_core/src/sketchcad_core.nim
+    DEPENDS
+        ${CMAKE_CURRENT_SOURCE_DIR}/sketchcad_core/src/sketchcad_core.nim
+        ${CMAKE_CURRENT_SOURCE_DIR}/sketchcad_core/src/cad_geometry.nim
     COMMENT "Building the SketchCAD Nim geometry core"
     VERBATIM
 )
