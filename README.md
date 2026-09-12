@@ -1,3 +1,5 @@
+![Logo](logo.png)
+
 # SketchCAD
 
 ### Fast, approachable parametric 3D design
