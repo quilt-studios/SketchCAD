@@ -1,4 +1,4 @@
-<img src="logo.png" alt="Logo" width="200" height="100">
+<img src="logo.png" alt="Logo" height="80">
 
 # SketchCAD
 
