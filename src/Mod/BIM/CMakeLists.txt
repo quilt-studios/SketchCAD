@@ -142,6 +142,7 @@ SET(bimcommands_SRCS
     bimcommands/BimEquipment.py
     bimcommands/BimExamples.py
     bimcommands/BimExtrude.py
+    bimcommands/BimExtrudeFace.py
     bimcommands/BimFence.py
     bimcommands/BimFrame.py
     bimcommands/BimFuse.py
@@ -187,6 +188,7 @@ SET(bimcommands_SRCS
     bimcommands/BimTDView.py
     bimcommands/BimText.py
     bimcommands/BimTrash.py
+    bimcommands/BimTrimex.py
     bimcommands/BimTruss.py
     bimcommands/BimTutorial.py
     bimcommands/BimUnclone.py
@@ -234,6 +236,7 @@ SET(bimtests_SRCS
     bimtests/TestArchAxisGui.py
     bimtests/TestArchBase.py
     bimtests/TestArchBaseGui.py
+    bimtests/TestBimTrimexGui.py
     bimtests/TestArchComponent.py
     bimtests/TestArchCovering.py
     bimtests/TestArchCoveringGui.py

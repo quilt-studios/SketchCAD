@@ -166,7 +166,7 @@ class BIMWorkbench(Workbench):
         ]
         self.modify_2d = [
             "BIM_OffsetTools",
-            "Draft_Trimex",
+            "BIM_Trimex",
             "Draft_Join",
             "Draft_Split",
             "Draft_Stretch",
@@ -183,6 +183,7 @@ class BIMWorkbench(Workbench):
             "BIM_ArrayTools",
             "Arch_CutPlane",
             "BIM_Extrude",
+            "BIM_ExtrudeFace",
             "BIM_BooleanTools",
         ]
 
