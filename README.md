@@ -1,6 +1,7 @@
 <img src="logo.png" alt="Logo" height="80">
 
 # SketchCAD
+[Join our SketchCAD community on Matrix!](https://matrix.to/#/%23sketchcad:matrix.org)
 
 ### Fast, approachable parametric 3D design
 
